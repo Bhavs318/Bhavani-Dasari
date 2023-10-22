@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="2">
+        {%if employees%}
+        <th>TITLE</th>
+        <th>AUTHOR</th> <th>ISBN</th> <th>PUBLICATION YEAR</th>
+        {%for i in Library%}
+        <tr>
+        <td>{{i.Title}}</td> <td>{{i.Author}}</td><td>{{i.ISBN}}</td> <td>{{i.Publication_year}}</td>
+        <td>{{i.Genre}}</td>
+        </tr>
+        {%endfor%}
+        {%endif%} 
+</body>
+</html>
